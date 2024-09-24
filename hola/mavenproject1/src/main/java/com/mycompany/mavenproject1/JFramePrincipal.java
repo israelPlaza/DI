@@ -230,7 +230,7 @@ public class JFramePrincipal extends javax.swing.JFrame {
 
     private void ComboCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboCursoActionPerformed
         // TODO add your handling code here:
-        lstNombres.get
+       
         
     }//GEN-LAST:event_ComboCursoActionPerformed
 
