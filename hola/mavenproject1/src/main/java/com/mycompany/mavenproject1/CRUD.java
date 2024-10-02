@@ -50,6 +50,12 @@ public class CRUD extends javax.swing.JFrame {
 
         jLabel1.setText("Nombre Completo");
 
+        cjNombres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cjNombresActionPerformed(evt);
+            }
+        });
+
         lstNombres.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lstNombresMouseClicked(evt);
@@ -183,8 +189,12 @@ public class CRUD extends javax.swing.JFrame {
 
     private void lstNombresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lstNombresMouseClicked
         // TODO add your handling code here:
-        **
+        
     }//GEN-LAST:event_lstNombresMouseClicked
+
+    private void cjNombresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cjNombresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cjNombresActionPerformed
 
     /**
      * @param args the command line arguments
