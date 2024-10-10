@@ -13,12 +13,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author isra
  */
-public class tabla1 extends javax.swing.JFrame {
+public class tabla2 extends javax.swing.JFrame {
     private DefaultTableModel modeloTabla; // Declarar como variable de instancia
     /**
      * Creates new form tabla1
      */
-    public tabla1() {
+    public tabla2() {
         initComponents();
         modeloTabla = (DefaultTableModel) tabla.getModel(); // Inicializar aquí
        
@@ -257,16 +257,7 @@ public class tabla1 extends javax.swing.JFrame {
         File archivo = fileChooser.getSelectedFile();
         
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
-            String linea;
-            modeloTabla.setRowCount(0); // Limpiar la tabla antes de importar nuevos datos
-            while ((linea = br.readLine()) != null) {
-                String[] datos = linea.split(","); // Suponiendo que los valores están separados por comas
-                if (datos.length == 4) { // Asegurarse de que la fila tiene 4 columnas
-                    modeloTabla.addRow(datos);
-                } else {
-                    JOptionPane.showMessageDialog(this, "El archivo CSV tiene un formato incorrecto.");
-                }
-            }
+              
         } catch (IOException e) {
             JOptionPane.showMessageDialog(this, "Error al leer el archivo: " + e.getMessage());
         }
@@ -352,20 +343,21 @@ public class tabla1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(tabla1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tabla2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(tabla1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tabla2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(tabla1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tabla2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(tabla1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(tabla2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new tabla1().setVisible(true);
+                new tabla2().setVisible(true);
             }
         });
         
