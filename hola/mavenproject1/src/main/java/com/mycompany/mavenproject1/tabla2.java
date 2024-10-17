@@ -33,6 +33,9 @@ public class tabla2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar2 = new javax.swing.JMenuBar();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
         marca = new javax.swing.JTextField();
@@ -48,6 +51,18 @@ public class tabla2 extends javax.swing.JFrame {
         exportar = new javax.swing.JButton();
         importar = new javax.swing.JButton();
         editar = new javax.swing.JButton();
+        javax.swing.JButton btnMostar = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu5 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+
+        jMenu3.setText("File");
+        jMenuBar2.add(jMenu3);
+
+        jMenu4.setText("Edit");
+        jMenuBar2.add(jMenu4);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,6 +148,33 @@ public class tabla2 extends javax.swing.JFrame {
             }
         });
 
+        btnMostar.setText("mostrar");
+        btnMostar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMostarActionPerformed(evt);
+            }
+        });
+
+        jMenu1.setText("File");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Edit");
+        jMenuBar1.add(jMenu2);
+
+        jMenu5.setText("Ver");
+
+        jMenuItem1.setText("Mostrar CRUD");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem1);
+
+        jMenuBar1.add(jMenu5);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -140,38 +182,42 @@ public class tabla2 extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(potencia))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(marca))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(modelo))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(potencia))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(marca))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(modelo))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(6, 6, 6)
+                                        .addGap(19, 19, 19)
                                         .addComponent(anadir)
-                                        .addGap(31, 31, 31)
+                                        .addGap(30, 30, 30)
                                         .addComponent(editar)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                        .addGap(33, 33, 33)
+                                        .addComponent(quitar)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE))
+                                    .addComponent(precio)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                         .addComponent(exportar)
-                                        .addGap(61, 61, 61)))
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(importar)
-                                    .addComponent(quitar))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE))
-                            .addComponent(precio))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(importar)
+                                        .addGap(95, 95, 95)))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btnMostar)
+                        .addGap(173, 173, 173)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -204,11 +250,13 @@ public class tabla2 extends javax.swing.JFrame {
                             .addComponent(anadir)
                             .addComponent(quitar)
                             .addComponent(editar))
-                        .addGap(28, 28, 28)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(exportar)
-                            .addComponent(importar))))
-                .addContainerGap(104, Short.MAX_VALUE))
+                            .addComponent(importar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnMostar)))
+                .addContainerGap(79, Short.MAX_VALUE))
         );
 
         pack();
@@ -217,6 +265,7 @@ public class tabla2 extends javax.swing.JFrame {
     private void anadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_anadirActionPerformed
         // TODO add your handling code here:
      Object[] obj = new Object[4];
+        
         obj[0] = marca.getText();
         obj[1] = modelo.getText();
         obj[2] = potencia.getText();
@@ -225,6 +274,7 @@ public class tabla2 extends javax.swing.JFrame {
         modeloTabla.addRow(obj); // Usar modeloTabla correctamente
         
         // Limpiar los campos de entrada
+        
         marca.setText("");
         modelo.setText("");
         potencia.setText("");
@@ -246,25 +296,64 @@ public class tabla2 extends javax.swing.JFrame {
 
     private void exportarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportarActionPerformed
         // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+    int seleccion = fileChooser.showSaveDialog(this); // 'this' se refiere al JFrame
+    
+    if (seleccion == JFileChooser.APPROVE_OPTION) {
+        File archivo = fileChooser.getSelectedFile();
+        
+        // Asegurarse de que el archivo tenga extensión .csv
+        if (!archivo.getAbsolutePath().endsWith(".csv")) {
+            archivo = new File(archivo.getAbsolutePath() + ".csv");
+        }
+        
+        try (FileWriter fw = new FileWriter(archivo)) {
+            // Escribir el encabezado de la tabla
+            fw.write("Marca,Modelo,Potencia,Precio\n");
+
+            // Recorrer todas las filas de la tabla
+            for (int i = 0; i < modeloTabla.getRowCount(); i++) {
+                for (int j = 0; j < modeloTabla.getColumnCount(); j++) {
+                    fw.write(modeloTabla.getValueAt(i, j).toString());
+                    if (j < modeloTabla.getColumnCount() - 1) {
+                        fw.write(","); // Separar por comas
+                    }
+                }
+                fw.write("\n"); // Nueva línea para la siguiente fila
+            }
+            
+            JOptionPane.showMessageDialog(this, "Archivo CSV exportado exitosamente.");
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Error al exportar el archivo: " + e.getMessage());
+        }
+    }
     }//GEN-LAST:event_exportarActionPerformed
 
     private void importarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importarActionPerformed
         // TODO add your handling code here:
-       JFileChooser fileChooser = new JFileChooser();
+        JFileChooser fileChooser = new JFileChooser();
     int seleccion = fileChooser.showOpenDialog(this); // 'this' se refiere al JFrame
     
     if (seleccion == JFileChooser.APPROVE_OPTION) {
         File archivo = fileChooser.getSelectedFile();
         
         try (BufferedReader br = new BufferedReader(new FileReader(archivo))) {
-              
+            String linea;
+            modeloTabla.setRowCount(0); // Limpiar la tabla antes de importar nuevos datos
+            while ((linea = br.readLine()) != null) {
+                String[] datos = linea.split(","); // Suponiendo que los valores están separados por comas
+                if (datos.length == 4) { // Asegurarse de que la fila tiene 4 columnas
+                    modeloTabla.addRow(datos);
+                } else {
+                    JOptionPane.showMessageDialog(this, "El archivo CSV tiene un formato incorrecto.");
+                }
+            }
         } catch (IOException e) {
             JOptionPane.showMessageDialog(this, "Error al leer el archivo: " + e.getMessage());
+            }
         }
-            JOptionPane.showMessageDialog(this, "Has importado bien el archvo");
-
     }//GEN-LAST:event_importarActionPerformed
-    }
+
     private void quitarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitarActionPerformed
         // TODO add your handling code here:
      // Eliminar la fila seleccionada de la tabla
@@ -326,6 +415,16 @@ public class tabla2 extends javax.swing.JFrame {
         
     }//GEN-LAST:event_editarActionPerformed
 
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+        CRUD crud = new CRUD();
+        crud.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void btnMostarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostarActionPerformed
+     
+    }//GEN-LAST:event_btnMostarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -372,6 +471,14 @@ public class tabla2 extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField marca;
     private javax.swing.JTextField modelo;

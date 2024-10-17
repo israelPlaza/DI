@@ -17,6 +17,7 @@ public class CRUD extends javax.swing.JFrame {
     public CRUD() {
         initComponents();
         lstNombres.setModel(model);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
       
     /**
